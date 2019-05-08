@@ -30,6 +30,15 @@ class LangtonAnt {
         [1, 1, 1, 1, 1]
       ];
       this.ant = { x: 3, y: 1, dir: "➡️" };
+    } else if (this.step === 3) {
+      this.grid = [
+        [1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 1],
+        [1, 1, 0, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1]
+      ];
+      this.ant = { x: 3, y: 2, dir: "⬇️" };
     }
     this.step += 1;
     return [this.grid, this.ant];
