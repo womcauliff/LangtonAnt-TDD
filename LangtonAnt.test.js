@@ -33,4 +33,19 @@ describe(`LangtonAnt`, () => {
       expect(ant).toEqual({ x: 2, y: 1, dir: "⬆️" });
     });
   });
+  describe(`step 2`, () => {
+    const [grid, ant] = langtonAnt.next();
+    it(`prev tile color should flip to black`, () => {
+      expect(grid).toEqual([
+        [1, 1, 1, 1, 1],
+        [1, 1, 0, 1, 1],
+        [1, 1, 0, 1, 1],
+        [1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1]
+      ]);
+    });
+    it(`ant should rotate 90 deg, move right one tile`, () => {
+      expect(ant).toEqual({ x: 3, y: 1, dir: "➡️" });
+    });
+  });
 });
