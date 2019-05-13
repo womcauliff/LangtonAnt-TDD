@@ -109,3 +109,8 @@ describe(`LangtonAnt`, () => {
     });
   });
 });
+
+// TODO: Support user-specified grid size.
+// TODO: Support user-specified initial ant direction.
+// TODO: Support user-specified step interval (i.e. ant takes 10 steps with each 'tick').
+// TODO: Handle case where ant can no longer advance because it reaches grid wall.
