@@ -14,7 +14,9 @@ const stateMachine = {
   "➡️": {
     1: "⬇️"
   },
-  "⬇️": {}
+  "⬇️": {
+    1: "⬅️"
+  }
 };
 
 class LangtonAnt {

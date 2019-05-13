@@ -2,15 +2,9 @@
   "name": "langton-ant",
   "version": "1.0.0",
   "description": "http://codingdojo.org/kata/LangtonAnt/",
-  "main": "index.html",
-  "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
-  },
+  "main": "LangtonAnt.js",
+  "scripts": {},
   "dependencies": {},
-  "devDependencies": {
-    "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
-  },
+  "devDependencies": {},
   "keywords": []
 }
