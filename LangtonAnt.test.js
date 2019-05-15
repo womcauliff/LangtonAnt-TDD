@@ -126,6 +126,42 @@ describe(`LangtonAnt`, () => {
       expect(ant).toEqual({ x: 3, y: 3, dir: "➡️" });
     });
   });
+
+  describe(`step 15`, () => {
+    langtonAnt.next();
+    langtonAnt.next();
+    langtonAnt.next();
+    langtonAnt.next();
+    const [grid, ant] = langtonAnt.next();
+    it(`prev tile should flip to white`, () => {
+      expect(grid).toEqual([
+        [1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 0, 1, 1],
+        [1, 1, 0, 0, 1]
+      ]);
+    });
+    it(`ant should rotate -90 deg, move up one tile`, () => {
+      expect(ant).toEqual({ x: 3, y: 2, dir: "⬆️" });
+    });
+  });
+
+  describe(`step 16`, () => {
+    const [grid, ant] = langtonAnt.next();
+    it(`prev tile should flip to white`, () => {
+      expect(grid).toEqual([
+        [1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 1],
+        [1, 0, 0, 1, 1],
+        [1, 0, 0, 1, 1],
+        [1, 1, 0, 0, 1]
+      ]);
+    });
+    it(`ant should rotate -90 deg, move left one tile`, () => {
+      expect(ant).toEqual({ x: 2, y: 2, dir: "⬅️" });
+    });
+  });
 });
 
 // TODO: Support user-specified grid size.
