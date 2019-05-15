@@ -108,6 +108,24 @@ describe(`LangtonAnt`, () => {
       expect(ant).toEqual({ x: 1, y: 3, dir: "⬅️" });
     });
   });
+  describe(`step 10`, () => {
+    langtonAnt.next();
+    langtonAnt.next();
+    langtonAnt.next();
+    const [grid, ant] = langtonAnt.next();
+    it(`prev tile should flip to white`, () => {
+      expect(grid).toEqual([
+        [1, 1, 1, 1, 1],
+        [1, 1, 0, 0, 1],
+        [1, 0, 0, 0, 1],
+        [1, 0, 1, 1, 1],
+        [1, 1, 1, 1, 1]
+      ]);
+    });
+    it(`ant should rotate -90 deg, move right one tile`, () => {
+      expect(ant).toEqual({ x: 3, y: 3, dir: "➡️" });
+    });
+  });
 });
 
 // TODO: Support user-specified grid size.
