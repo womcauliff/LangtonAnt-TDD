@@ -15,7 +15,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should be on center tile, facing left`, () => {
-      expect(antLocation).toEqual({ x: 2, y: 2, dir: "⬅️" });
+      expect(antLocation).toEqual({ x: 2, y: 2, dir: "L" });
     });
   });
   describe(`step 1`, () => {
@@ -30,7 +30,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant rotates 90 deg, moves up one tile`, () => {
-      expect(ant).toEqual({ x: 2, y: 1, dir: "⬆️" });
+      expect(ant).toEqual({ x: 2, y: 1, dir: "U" });
     });
   });
   describe(`step 2`, () => {
@@ -45,7 +45,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate 90 deg, move right one tile`, () => {
-      expect(ant).toEqual({ x: 3, y: 1, dir: "➡️" });
+      expect(ant).toEqual({ x: 3, y: 1, dir: "R" });
     });
   });
   describe(`step 3`, () => {
@@ -60,7 +60,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate 90 deg, move down one tile`, () => {
-      expect(ant).toEqual({ x: 3, y: 2, dir: "⬇️" });
+      expect(ant).toEqual({ x: 3, y: 2, dir: "D" });
     });
   });
   describe(`step 4`, () => {
@@ -75,7 +75,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate 90 deg, move left one tile`, () => {
-      expect(ant).toEqual({ x: 2, y: 2, dir: "⬅️" });
+      expect(ant).toEqual({ x: 2, y: 2, dir: "L" });
     });
   });
   describe(`step 5`, () => {
@@ -90,7 +90,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate -90 deg, move down one tile`, () => {
-      expect(ant).toEqual({ x: 2, y: 3, dir: "⬇️" });
+      expect(ant).toEqual({ x: 2, y: 3, dir: "D" });
     });
   });
   describe(`step 6`, () => {
@@ -105,7 +105,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate 90 deg, move left one tile`, () => {
-      expect(ant).toEqual({ x: 1, y: 3, dir: "⬅️" });
+      expect(ant).toEqual({ x: 1, y: 3, dir: "L" });
     });
   });
   describe(`step 10`, () => {
@@ -123,7 +123,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate -90 deg, move right one tile`, () => {
-      expect(ant).toEqual({ x: 3, y: 3, dir: "➡️" });
+      expect(ant).toEqual({ x: 3, y: 3, dir: "R" });
     });
   });
 
@@ -143,7 +143,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate -90 deg, move up one tile`, () => {
-      expect(ant).toEqual({ x: 3, y: 2, dir: "⬆️" });
+      expect(ant).toEqual({ x: 3, y: 2, dir: "U" });
     });
   });
 
@@ -159,7 +159,7 @@ describe(`LangtonAnt`, () => {
       ]);
     });
     it(`ant should rotate -90 deg, move left one tile`, () => {
-      expect(ant).toEqual({ x: 2, y: 2, dir: "⬅️" });
+      expect(ant).toEqual({ x: 2, y: 2, dir: "L" });
     });
   });
 });

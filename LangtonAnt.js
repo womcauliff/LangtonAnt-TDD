@@ -5,21 +5,21 @@
  * the ant's next direction.
  */
 const stateMachine = {
-  "⬅️": {
-    0: "⬇️",
-    1: "⬆️"
+  L: {
+    0: "D",
+    1: "U"
   },
-  "⬆️": {
-    0: "⬅️",
-    1: "➡️"
+  U: {
+    0: "L",
+    1: "R"
   },
-  "➡️": {
-    0: "⬆️",
-    1: "⬇️"
+  R: {
+    0: "U",
+    1: "D"
   },
-  "⬇️": {
-    0: "➡️",
-    1: "⬅️"
+  D: {
+    0: "R",
+    1: "L"
   }
 };
 
@@ -33,7 +33,7 @@ class LangtonAnt {
       [1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1]
     ];
-    this.ant = { x: 2, y: 2, dir: "⬅️" };
+    this.ant = { x: 2, y: 2, dir: "L" };
   }
 
   /**
@@ -66,16 +66,16 @@ class LangtonAnt {
     let { x, y } = currentLocation;
 
     switch (direction) {
-      case "⬅️":
+      case "L":
         x -= 1;
         break;
-      case "⬆️":
+      case "U":
         y -= 1;
         break;
-      case "➡️":
+      case "R":
         x += 1;
         break;
-      case "⬇️":
+      case "D":
         y += 1;
         break;
       // no default

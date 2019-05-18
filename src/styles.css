@@ -1,3 +1,49 @@
-body {
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
   font-family: sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75vh;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 75vh;
+  background-color: gray;
+  padding: 5px;
+}
+.row {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.row > .cell {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 1px;
+  font-size: 2em;
+}
+
+.cell.ant {
+  color: red !important;
+}
+.cell.white {
+  background-color: white;
+  color: black;
+}
+.cell.black {
+  background-color: black;
+  color: white;
 }
